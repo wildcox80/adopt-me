@@ -29,7 +29,7 @@ const SearchParams = () => {
     updateBreed("");
 
     pet.breeds(animal).then(({ breeds }) => {
-      const breedStrings = breeds.map(({ name }) => name);
+      const breedStrings = breeds.map(({ breed }) => breed);
       updateBreeds(breedStrings);
     }, console.error);
   }, [animal]);

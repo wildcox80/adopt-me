@@ -5,7 +5,6 @@ import Carousel from "./Carousel";
 import Modal from "./Modal";
 import ErrorBoundary from "./ErrorBoundary";
 import ThemeContext from "./ThemeContext";
-import Loading from "./Loading";
 
 class Details extends React.Component {
   state = { loading: true, showModal: false };
@@ -32,12 +31,7 @@ class Details extends React.Component {
   adopt = () => navigate(this.state.url);
   render() {
     if (this.state.loading) {
-      return (
-        <div>
-          <Loading color={"grey"}/>
-        </div>
-
-      );
+      return <h1>loading … </h1>;
     }
 
     const {
